@@ -1,5 +1,7 @@
 import './App.css'
-import { Button } from './components/ui/button'
+import Index from './components/Header'
+import IndexPage from './components/Main'
+
 
 function App() {
   
@@ -7,7 +9,8 @@ function App() {
   return (
     <>
       <div>
-        <Button>App</Button>
+        <Index />
+        <IndexPage />
       </div>
     </>
   )
