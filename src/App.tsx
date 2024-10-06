@@ -1,5 +1,6 @@
 import './App.css'
-import Index from './components/Header'
+import Footer from './components/Footer'
+import Header from './components/Header'
 import IndexPage from './components/Main'
 
 
@@ -9,8 +10,9 @@ function App() {
   return (
     <>
       <div>
-        <Index />
+        <Header />
         <IndexPage />
+        <Footer />
       </div>
     </>
   )
