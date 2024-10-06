@@ -1,12 +1,14 @@
 import { Button } from '../ui/button'
 
-const Index = () => {
+const Header = () => {
   return (
-    <div className="fixed flex justify-between px-8 w-screen h-16 bg-teal-400 items-center drop-shadow-2xl border-b border-gray-300 shadow-md">
-            <h1 className="font-bold text-2xl">meditation-program</h1>
+    <div 
+        className="fixed flex justify-between px-8 w-screen h-16 bg-gray-500 
+        items-center drop-shadow-2xl shadow-md z-10">
+            <h1 className="font-bold text-2xl">Meditation-Program</h1>
             <div className="flex gap-3">
                 <Button variant="outline">
-                    <a href="https://ui.shadcn.com/docs">そもそも瞑想とは？</a>
+                    <a href="https://ui.shadcn.com/docs">Meditation-Programとは？</a>
                 </Button>
                 <Button>menu</Button>
             </div>
@@ -14,4 +16,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default Header;
