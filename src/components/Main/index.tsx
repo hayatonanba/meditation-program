@@ -1,6 +1,6 @@
  import { motion } from "framer-motion"
  import { Swiper, SwiperSlide } from 'swiper/react';
- import { Autoplay, Navigation } from "swiper/modules";
+ import { Autoplay, Navigation, EffectCoverflow } from "swiper/modules";
  import 'swiper/css';
  import 'swiper/css/navigation';
  import 'swiper/css/effect-coverflow';
@@ -50,10 +50,17 @@ const IndexPage = () => {
         <h1 className="text-center text-6xl underline underline-offset-8 p-6">Section</h1>
         <Swiper
             effect={'coverflow'}
-            modules={[Navigation, Autoplay]}
+            modules={[Navigation, Autoplay, EffectCoverflow]}
             spaceBetween={30}
             slidesPerView={3}
-            speed={400}
+            speed={800}
+            coverflowEffect={{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            }}
             autoplay={{
                 delay: 3000,
                 disableOnInteraction: true,
@@ -68,6 +75,12 @@ const IndexPage = () => {
             <SwiperSlide><img className="rounded-md" src="/image/forest.avif" /></SwiperSlide>
             <SwiperSlide><img className="rounded-md" src="/image/ocean.avif" /></SwiperSlide>
             <SwiperSlide><img className="rounded-md" src="/image/star.avif" /></SwiperSlide>
+
+            <style>{`
+                .swiper-button-next, .swiper-button-prev {
+                color: #000000; 
+                } `}
+            </style>
         </Swiper>
         <p className="text-3xl text-center p-5">
             この中から好きなシチュエーションを選択してください。 <br />
