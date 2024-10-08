@@ -1,41 +1,50 @@
+import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react"
 
 type WindowDate = {
     openWindow : boolean;
-    onClose: () => void;
+    onClose: () => void; 
 }
 
-const Window = ({openWindow, onClose} : WindowDate) => {
-if (!openWindow) {
-    return null;
-}
+const Window = ({openWindow, onClose,} : WindowDate) => {
 
   return (
-    <div className="bg-[rgba(0,0,0,0.5)] fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center">
-        <div 
-        className="bg-white rounded-md font-Shippori w-[50%] h-[90%]">
-            <button
-            onClick={onClose} 
-            className="">
-                <X />
-            </button> 
-            <h1>瞑想とは？</h1>
-            <div className="bg-gray-300 rounded-md m-5">
-                <h2 className="text-3xl text-center">混濁した思考を一掃する心の洗濯</h2>
-                <p className="text-center text-xl">
-                    瞑想、冥想（めいそう、英: meditation、英: contemplation）とは、<br />
-                    心を静めて無心になること、何も考えずリラックスすること、心を静めて神に祈ったり、<br />
-                    何かに心を集中させること、目を閉じて深く静かに思いをめぐらすことなどとされている。<br />
-                    各々の宗教の伝統や修行の段階、目的等により内容は様々である。<br />
-                    本来は冥想と書くと思われる。この呼称は、単に心身の静寂を取り戻すために行うような比較的日常的なものから、<br />
-                    絶対者（神）をありありと体感したり、究極の智慧を得るようなものまで、<br />
-                    広い範囲に用いられる。現代では、健康の向上や心理的治療、自己成長、<br />
-                    自己向上などの世俗的な目的をもって、様々な瞑想が行われている。
-                </p>
-                <img className="w-[50%] justify-center" src="/image/motalwindow.avif" />
+    
+    <AnimatePresence>
+        {openWindow && (
+        <div className="bg-[rgba(0,0,0,0.5)] fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center">
+            <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white rounded-md  w-[50%] h-[90%]">
+                <div className="flex justify-between p-3">
+                    <h1 className="text-3xl font-medium">自然によって得られる力</h1>
+                        <button
+                        onClick={onClose}>
+                            <X />
+                        </button>
+                </div>
+                <div className="bg-gray-100 rounded-md m-5">
+                    <h2 className="text-2xl font-medium text-center p-4">混濁した思考を一掃する心の洗濯</h2>
+                    <p className="text-center font-medium text-xl p-3">
+                        人は自然に触れることで自律神経を整え健康を維持できるという力があります。
+                        例えば、森林浴は交感神経の活動が低下しリラックスする副交感神経が <br />優位になります。
+                        これにより、ストレスホルモンであるコルチゾールの分泌が抑えられ、精神的なリラックスが促進されます。
+                        またこのような自然と触れることによって得られる効果は、実際に自然の中に身を置くことができなくても
+                        自然の画像や音声に触れるだけである程度のリラックス効果が得られることが研究で確認されています。
+                        自然の画像を見ることは、都市環境での活動に比べて、より大きなリラックス効果が得られるとされています。
+                        加えて、自然の音（鳥のさえずり、川のせせらぎ、風の音など）を聴くことは、 <br />心拍数を安定させ、
+                        ストレスを軽減する効果があります。
+                    </p>
+                    <img className="p-3 mx-auto w-[40%]" src="/image/motalwindow.png" />
+                </div>
+            </motion.div> 
             </div>
-        </div>
-    </div>
+        )}
+    </AnimatePresence>
+   
   )
 }
 

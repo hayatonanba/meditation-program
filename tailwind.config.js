@@ -5,6 +5,7 @@ export default {
   theme: {
 	fontFamily: {
 		Shippori: ['Shippori Mincho', 'sans-serif'],
+		Obitron : ['Orbitron', 'sans-serif']
 		},
   	extend: {
   		borderRadius: {
