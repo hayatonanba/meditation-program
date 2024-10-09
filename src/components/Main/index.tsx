@@ -11,15 +11,15 @@ const IndexPage = () => {
   return (
     <div className="bg-[#f8f4e6] font-Shippori">
         <div className="bg-[url('/image/indexpage.jpg')] w-full h-screen bg-cover justify-center">
-            <h1 className="text-center text-8xl p-36">潜在意識の最高峰へ。</h1>
+            <h1 className="text-center text-8xl max-sm:text-6xl p-36">潜在意識の最高峰へ。</h1>
         </div>
 
         <h1 className="text-center text-6xl underline underline-offset-8 p-3">About</h1>
         <div className="w-full overflow-hidden">
             <motion.div 
-                animate={{ x: ["0%", "-100%"] }} 
-                transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-                className="grid auto-cols-10rem grid-flow-col gap-20 p-10 w-[calc(100vw/5)]">
+                animate={{ x: ["0%", "-525%"] }} 
+                transition={{ repeat: Infinity, duration: 11, ease: "linear" }}
+                className="grid auto-cols-10rem grid-flow-col gap-36 p-10 w-[calc(100vw/5)]">
                 <img className="skew-y-6 rounded-md"  src="/image/star.avif" />
                 <img className="skew-y-6 rounded-md" src="/image/fire.avif" />
                 <img className="skew-y-6 rounded-md" src="/image/filed.avif" />
@@ -63,7 +63,7 @@ const IndexPage = () => {
                 slideShadows: true,
             }}
             autoplay={{
-                delay: 3000,
+                delay: 2500,
                 disableOnInteraction: true,
             }}
             loop={true}
