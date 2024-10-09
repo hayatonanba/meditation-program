@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '../ui/button'
 import { Mail } from 'lucide-react';
 import Window from './window';
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,7 +21,7 @@ const Header = () => {
     <div
         className="fixed flex justify-between px-8 w-screen h-16 bg-gray-500 
         items-center drop-shadow-2xl shadow-md z-10">
-            <h1 className="font-bold font-Obitron text-2xl">Meditation-Program</h1>
+            <Link to= "/"><h1 className="font-bold font-Obitron text-2xl">Meditation-Program</h1></Link>
             <div className="flex gap-3">
                 <div>
                     <Button 

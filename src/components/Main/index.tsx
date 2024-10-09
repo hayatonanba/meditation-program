@@ -1,6 +1,7 @@
  import { motion } from "framer-motion"
  import { Swiper, SwiperSlide } from 'swiper/react';
  import { Autoplay, Navigation, EffectCoverflow } from "swiper/modules";
+ import { Link } from "react-router-dom";
  import 'swiper/css';
  import 'swiper/css/navigation';
  import 'swiper/css/effect-coverflow';
@@ -70,11 +71,11 @@ const IndexPage = () => {
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
             >
-            <SwiperSlide><img className="rounded-md" src="/image/filed.avif" /></SwiperSlide>
-            <SwiperSlide><img className="rounded-md" src="/image/fire.avif" /></SwiperSlide>
-            <SwiperSlide><img className="rounded-md" src="/image/forest.avif" /></SwiperSlide>
-            <SwiperSlide><img className="rounded-md" src="/image/ocean.avif" /></SwiperSlide>
-            <SwiperSlide><img className="rounded-md" src="/image/star.avif" /></SwiperSlide>
+            <SwiperSlide><Link to ="/aboutfield"><img className="rounded-md" src="/image/filed.avif" /></Link></SwiperSlide>
+            <SwiperSlide><Link to ="/aboutfire"><img className="rounded-md" src="/image/fire.avif" /></Link></SwiperSlide>
+            <SwiperSlide><Link to ="/aboutforest"><img className="rounded-md" src="/image/forest.avif" /></Link></SwiperSlide>
+            <SwiperSlide><Link to ="/aboutocean"><img className="rounded-md" src="/image/ocean.avif" /></Link></SwiperSlide>
+            <SwiperSlide><Link to ="/aboutstar"><img className="rounded-md" src="/image/star.avif" /></Link></SwiperSlide>
 
             <style>{`
                 .swiper-button-next, .swiper-button-prev {
