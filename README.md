@@ -49,3 +49,7 @@ export default tseslint.config({
 })
 ```
 # meditation-program
+
+瞑想をサポートするwebサイト <br />
+瞑想の呼吸のリズムや科学的に効果のある自然の風景画像等を配置しています。
+近々、睡眠導入等の他の呼吸法も追加実装予定
