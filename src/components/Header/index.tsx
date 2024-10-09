@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '../ui/button'
-import { CircleHelp, Mail } from 'lucide-react';
+import { CircleHelp } from 'lucide-react';
 import Window from './window';
 import { Link } from 'react-router-dom';
 import Menu from './menu';
@@ -35,8 +35,7 @@ const Header = () => {
                         </div>
                     </Button>
                     <Window openWindow={openWindow} onClose= {closeClick} />             
-                    <Button className='gap-3 max-sm:hidden'><Mail />お問い合わせはこちら</Button>
-                    <Button className='sm:hidden'><Menu /></Button>
+                    <Button><Menu /></Button>
             </div>
     </div>
   )

@@ -4,7 +4,7 @@ import { X } from "lucide-react"
 type WindowDate = {
     openWindow : boolean;
     onClose: () => void; 
-}
+};
 
 const Window = ({openWindow, onClose,} : WindowDate) => {
 
@@ -12,13 +12,13 @@ const Window = ({openWindow, onClose,} : WindowDate) => {
     
     <AnimatePresence>
         {openWindow && (
-        <div className="bg-[rgba(0,0,0,0.5)] fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center">
+        <div className="bg-[rgba(0,0,0,0.5)] fixed top-0 left-0 bottom-0 right-0 flex h-auto justify-center items-center">
             <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-white rounded-md  w-[50%] h-[90%]">
+                className="bg-white rounded-md  w-[50%] my-auto">
                 <div className="flex justify-between p-3">
                     <h1 className="text-3xl font-medium">自然によって得られる力</h1>
                         <button
