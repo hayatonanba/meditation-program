@@ -19,13 +19,19 @@ const Menu = () => {
                 <SheetHeader>
                 <SheetTitle>Menu</SheetTitle>
                 <SheetDescription>
-                    <ul className="w-[50%] text-2xl">
-                      <li className="py-5"><Link to ="/aboutfield" className="flex gap-4"><Binoculars />田園</Link></li>
-                      <li className="py-5"><Link to ="/aboutfire" className="flex gap-4"><FlameKindling />焚き火</Link></li>
-                      <li className="py-5"><Link to ="/aboutforest" className="flex gap-4"><Mountain />森林</Link></li>
-                      <li className="py-5"><Link to ="/aboutocean" className="flex gap-4"><Waves />浜辺</Link></li>
-                      <li className="py-5"><Link to ="/aboutstar" className="flex gap-4"><MoonStar />星空</Link></li>
-                      <li className="py-5"><Link to ="/form" className="flex text-xl gap-4"><Mail />お問い合わせ</Link></li>
+                    <ul className="w-[80%] text-2xl">
+                      <li className="py-6"><Link to ="/aboutfield" className="flex gap-4"><Binoculars />田園</Link></li>
+                      <div className="container mx-auto border"></div>
+                      <li className="py-6"><Link to ="/aboutfire" className="flex gap-4"><FlameKindling />焚き火</Link></li>
+                      <div className="container mx-auto border"></div>
+                      <li className="py-6"><Link to ="/aboutforest" className="flex gap-4"><Mountain />森林</Link></li>
+                      <div className="container mx-auto border"></div>
+                      <li className="py-6"><Link to ="/aboutocean" className="flex gap-4"><Waves />浜辺</Link></li>
+                      <div className="container mx-auto border"></div>
+                      <li className="py-6"><Link to ="/aboutstar" className="flex gap-4"><MoonStar />星空</Link></li>
+                      <div className="container mx-auto border"></div>
+                      <li className="py-6"><Link to ="/form" className="flex text-xl gap-4"><Mail />お問い合わせ</Link></li>
+                      <div className="container mx-auto border"></div>
                     </ul>
                 </SheetDescription>
                 </SheetHeader>

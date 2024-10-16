@@ -10,6 +10,7 @@ import AboutForest from "./components/Main/About/AboutForest";
 import AboutOcean from "./components/Main/About/AboutOcean";
 import AboutStar from "./components/Main/About/AboutStar";  
 import Form from "./components/Footer/form";
+import Policy from "./components/Footer/policy";
 
   const AppRouter = () => {
     return (
@@ -22,6 +23,7 @@ import Form from "./components/Footer/form";
           <Route path='/aboutocean' element={<AboutOcean />} />
           <Route path='/aboutstar' element={<AboutStar />} />
           <Route path='/form' element={<Form />} />
+          <Route path='/policy' element={<Policy />} />
         </Routes>
       </BrowserRouter>
     )
