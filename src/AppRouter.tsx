@@ -8,8 +8,9 @@ import AboutFire from "./components/Main/About/AboutFire";
 import AboutField from "./components/Main/About/AboutField";
 import AboutForest from "./components/Main/About/AboutForest";
 import AboutOcean from "./components/Main/About/AboutOcean";
-import AboutStar from "./components/Main/About/AboutStar";
-  
+import AboutStar from "./components/Main/About/AboutStar";  
+import Form from "./components/Footer/form";
+
   const AppRouter = () => {
     return (
       <BrowserRouter>
@@ -20,6 +21,7 @@ import AboutStar from "./components/Main/About/AboutStar";
           <Route path='/aboutforest' element={<AboutForest />} />
           <Route path='/aboutocean' element={<AboutOcean />} />
           <Route path='/aboutstar' element={<AboutStar />} />
+          <Route path='/form' element={<Form />} />
         </Routes>
       </BrowserRouter>
     )

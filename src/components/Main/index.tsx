@@ -83,14 +83,10 @@ const IndexPage = () => {
                 } `}
             </style>
         </Swiper>
-        <p className="text-3xl text-center p-5">
+        <p className="text-3xl text-center p-9 pb-28">
             この中から好きなシチュエーションを選択してください。 <br />
             自然の音声とサポート機能があなたを快適な瞑想へと誘います。
         </p>
-
-        <h1 className="text-center text-6xl underline underline-offset-8 p-3">Addtional</h1>
-        <p className="text-4xl text-center p-10">〜Coming soon〜</p>
-
     </div>
   )
 }

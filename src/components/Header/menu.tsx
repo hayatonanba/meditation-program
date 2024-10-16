@@ -25,7 +25,7 @@ const Menu = () => {
                       <li className="py-5"><Link to ="/aboutforest" className="flex gap-4"><Mountain />森林</Link></li>
                       <li className="py-5"><Link to ="/aboutocean" className="flex gap-4"><Waves />浜辺</Link></li>
                       <li className="py-5"><Link to ="/aboutstar" className="flex gap-4"><MoonStar />星空</Link></li>
-                      <li className="py-5"><Link to ="/aboutstar" className="flex text-xl gap-4"><Mail />お問い合わせ</Link></li>
+                      <li className="py-5"><Link to ="/form" className="flex text-xl gap-4"><Mail />お問い合わせ</Link></li>
                     </ul>
                 </SheetDescription>
                 </SheetHeader>
