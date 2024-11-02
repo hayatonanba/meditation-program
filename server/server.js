@@ -7,11 +7,11 @@ const port = process.env.PORT || 5002;
 app.use(cors()); // CORSを有効化
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get("/", (_req, res) => {
     res.send("確認テスト");
 });
 
-app.get("/users", async (req, res) => {
+app.get("/users", async (_req, res) => {
     try {
         const results = await pool.query("SELECT * FROM consumer");
         res.status(200).json(results.rows);
