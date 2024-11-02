@@ -33,32 +33,6 @@ app.post('/users/api', async (req, res) => {
     }
 });
 
-app.put('/users/api/:id', async (req, res) => {
-    const { id } = req.params;
-    const { username, address, content } = req.body;
-    try {
-        await pool.query(
-            'UPDATE consumer SET username = $1, address = $2, content = $3 WHERE id = $4',
-            [username, address, content, id]
-        );
-        res.status(200).json({ message: 'ユーザー情報が正常に更新されました' });
-    } catch (error) {
-        console.error('ユーザー情報更新時のエラー:', error);
-        res.status(500).json({ error: 'データベースエラー' });
-    }
-});
-
-app.delete('/users/api/:id', async (req, res) => {
-    const { id } = req.params;
-    try {
-        await pool.query('DELETE FROM consumer WHERE id = $1', [id]);
-        res.status(200).json({ message: 'ユーザーが正常に削除されました' });
-    } catch (error) {
-        console.error('ユーザー削除時のエラー:', error);
-        res.status(500).json({ error: 'データベースエラー' });
-    }
-});
-
 app.listen(port, () => {
     console.log(`サーバーがポート ${port} で起動しました`);
 });
