@@ -1,19 +1,24 @@
 const express = require('express');
+const cors = require('cors'); // CORSパッケージのインポート
 const pool = require('./db');
 const app = express();
 const port = process.env.PORT || 5002;
 
+app.use(cors()); // CORSを有効化
 app.use(express.json());
 
 app.get("/", (req, res) => {
     res.send("確認テスト");
 });
 
-app.get("/users", (req, res) => {
-    pool.query("SELECT * FROM consumer", (error, results) => {
-        if (error) throw error;
-        return res.status(200).json(results.rows);
-    });
+app.get("/users", async (req, res) => {
+    try {
+        const results = await pool.query("SELECT * FROM consumer");
+        res.status(200).json(results.rows);
+    } catch (error) {
+        console.error('ユーザー情報取得エラー:', error);
+        res.status(500).json({ error: 'データベースエラー' });
+    }
 });
 
 app.post('/users/api', async (req, res) => {
@@ -28,7 +33,6 @@ app.post('/users/api', async (req, res) => {
     }
 });
 
-// ユーザー情報の更新
 app.put('/users/api/:id', async (req, res) => {
     const { id } = req.params;
     const { username, address, content } = req.body;
@@ -44,7 +48,6 @@ app.put('/users/api/:id', async (req, res) => {
     }
 });
 
-// ユーザー削除
 app.delete('/users/api/:id', async (req, res) => {
     const { id } = req.params;
     try {
@@ -56,7 +59,6 @@ app.delete('/users/api/:id', async (req, res) => {
     }
 });
 
-// サーバーの起動
 app.listen(port, () => {
-    console.log(`こんにちは ${port}`);
+    console.log(`サーバーがポート ${port} で起動しました`);
 });
